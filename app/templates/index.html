@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>IntelliBed Patient Monitor</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Monitor</a>
+                    </li>
+                    <li role="presentation"><a href="#">Patient Overview</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">IntelliBed Patient Monitor</h3>
+        </div>
+ 
+        <!---div class="jumbotron">
+            <h1>Patient Monitor</h1>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Overview</a>
+            </p>
+        </div-->
+ 
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Pressure Zones</h4>
+                <img src="{{ url_for('pressure_zones') }}">
+                <p>Current pressure zones</p>
+            </div>
+
+            <div class="col-lg-6">
+                <h4>Risk Zones</h4>
+                <img src="{{ url_for('pressure_history') }}">
+                <p>Take care when moving!</p>
+            </div>
+
+
+        </div>
+
+        <div class="btn-group-vertical" role="group" aria-label="...">
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Heart Rate: 80 bpm
+            </button>
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-tint" aria-hidden="true"></span> Humidity: 50 %
+            </button>
+             <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 50 min until next change
+            </button>
+            <button type="button" class="btn btn-default btn-lg">
+              <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Body Temperature: 30 °C
+            </button>
+
+        </div>
+
+ 
+        <footer class="footer">
+            <p>&copy; IntelliBed Monitoring Systems 2016</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
